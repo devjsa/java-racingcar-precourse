@@ -9,6 +9,8 @@ public class Racingcar {
       System.out.println(MessageConstants.GREETING_MESSAGE);
       InputEvent inputEvent = new InputEvent();
       Input input = inputEvent.getInput();
+      RacingEvent racingEvent = new RacingEvent();
+      racingEvent.getResult(input);
       System.out.println(MessageConstants.END_MESSAGE);
   }
 }

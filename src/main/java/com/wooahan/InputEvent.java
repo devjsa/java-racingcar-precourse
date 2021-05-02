@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class InputEvent {
 
-    public Input getInput(){
+    public Input getInput() {
         Scanner scanner = new Scanner(System.in);
         Input input = new Input();
         getCarInput(input, scanner);
@@ -23,7 +23,7 @@ public class InputEvent {
         try {
             String countString = scanner.nextLine();
             input.setRacingCount(countString);
-        } catch (InputMismatchException e) {
+        } catch (InputMismatchException | NumberFormatException e) {
             System.out.println(MessageConstants.ERROR_MESSAGE);
             getCountInput(input, scanner);
         }
