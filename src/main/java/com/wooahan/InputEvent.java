@@ -5,7 +5,6 @@ import com.wooahan.vo.CarList;
 import com.wooahan.vo.Input;
 
 import java.util.InputMismatchException;
-import java.util.List;
 import java.util.Scanner;
 
 public class InputEvent {
@@ -14,8 +13,20 @@ public class InputEvent {
         Scanner scanner = new Scanner(System.in);
         Input input = new Input();
         getCarInput(input, scanner);
+        getCountInput(input, scanner);
         scanner.close();
         return input;
+    }
+
+    private void getCountInput(Input input, Scanner scanner) {
+        System.out.println(MessageConstants.COUNT_REQUIRE_MESSAGE);
+        try {
+            String countString = scanner.nextLine();
+            input.setRacingCount(countString);
+        } catch (InputMismatchException e) {
+            System.out.println(MessageConstants.ERROR_MESSAGE);
+            getCountInput(input, scanner);
+        }
     }
 
     private void getCarInput(Input input, Scanner scanner) {
@@ -25,7 +36,7 @@ public class InputEvent {
             input.setCarList(carList.getCarList());
         } catch (InputMismatchException e) {
             System.out.println(MessageConstants.ERROR_MESSAGE);
-            getInput();
+            getCarInput(input, scanner);
         }
     }
 

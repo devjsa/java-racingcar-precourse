@@ -12,4 +12,8 @@ import java.util.List;
 public class Input {
     private List<Car> carList;
     private Integer racingCount;
+
+    public void setRacingCount(String countString) {
+
+    }
 }
