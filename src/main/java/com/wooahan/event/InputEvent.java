@@ -1,4 +1,4 @@
-package com.wooahan;
+package com.wooahan.event;
 
 import com.wooahan.constants.MessageConstants;
 import com.wooahan.vo.CarList;

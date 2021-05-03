@@ -1,6 +1,8 @@
 package com.wooahan;
 
 import com.wooahan.constants.MessageConstants;
+import com.wooahan.event.InputEvent;
+import com.wooahan.event.RacingEvent;
 import com.wooahan.vo.Input;
 
 public class Racingcar {
@@ -10,7 +12,7 @@ public class Racingcar {
       InputEvent inputEvent = new InputEvent();
       Input input = inputEvent.getInput();
       RacingEvent racingEvent = new RacingEvent();
-      racingEvent.getResult(input);
+      racingEvent.makeResult(input);
       System.out.println(MessageConstants.END_MESSAGE);
   }
 }
