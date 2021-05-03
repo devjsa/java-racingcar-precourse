@@ -5,7 +5,12 @@ import com.wooahan.vo.Input;
 import com.wooahan.vo.Result;
 import lombok.Getter;
 
+import java.util.Collections;
 import java.util.List;
+
+import static com.wooahan.constants.MessageConstants.RACING_RESULT_MESSAGE;
+import static com.wooahan.constants.ValueConstants.RACING_POSITION_CHAR;
+import static com.wooahan.constants.ValueConstants.RACING_VIEW_CHAR;
 
 public class RacingEvent {
 
@@ -18,6 +23,7 @@ public class RacingEvent {
 
     public void makeResult(Input input) {
         List<Car> carList = input.getCarList();
+        System.out.println(RACING_RESULT_MESSAGE);
         for (int idx = 0; idx < input.getRacingCount(); idx++) {
             racing(carList);
         }
@@ -26,7 +32,18 @@ public class RacingEvent {
     private void racing(List<Car> carList) {
         for (Car car: carList) {
             Integer position = car.goFoward();
+            printRacing(car);
             result.calculateWinningPosition(position);
         }
+        System.out.println("\n");
+    }
+
+    private void printRacing(Car car){
+        String print = String.format("%s %s %s", car.getName(), RACING_VIEW_CHAR, getPositionString(car));
+        System.out.println(print);
+    }
+
+    private String getPositionString(Car car) {
+        return String.join("", Collections.nCopies(car.getPosition(), RACING_POSITION_CHAR));
     }
 }

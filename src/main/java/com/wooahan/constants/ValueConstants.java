@@ -7,7 +7,7 @@ public class ValueConstants {
 
     public static final Integer FORWARD_MIN_VALUE = 4;
 
-    public static final String RACING_VIEW_CHAR = " : ";
+    public static final String RACING_VIEW_CHAR = ":";
     public static final String RACING_POSITION_CHAR = "-";
     public static final String WINNER_DELIMITER_CHAR = ",";
 }
