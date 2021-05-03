@@ -27,6 +27,13 @@ public class RacingEvent {
         for (int idx = 0; idx < input.getRacingCount(); idx++) {
             racing(carList);
         }
+        total(carList);
+    }
+
+    private void total(List<Car> carList) {
+        for (Car car: carList) {
+            result.addWnningCar(car);
+        }
     }
 
     private void racing(List<Car> carList) {
@@ -35,7 +42,7 @@ public class RacingEvent {
             printRacing(car);
             result.calculateWinningPosition(position);
         }
-        System.out.println("\n");
+        System.out.print("\n");
     }
 
     private void printRacing(Car car){

@@ -16,7 +16,7 @@ public class Result {
     public String getWinningCarString() {
         StringBuilder sb = new StringBuilder();
         for (int idx = 0; idx < winningCars.size(); idx++) {
-            sb.append(winningCars.size());
+            sb.append(winningCars.get(idx));
             appendDelimiter(sb, idx);
         }
         return sb.toString();
