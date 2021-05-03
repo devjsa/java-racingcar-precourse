@@ -31,13 +31,13 @@ public class RacingEvent {
     }
 
     private void total(List<Car> carList) {
-        for (Car car: carList) {
+        for (Car car : carList) {
             result.addWnningCar(car);
         }
     }
 
     private void racing(List<Car> carList) {
-        for (Car car: carList) {
+        for (Car car : carList) {
             Integer position = car.goFoward();
             printRacing(car);
             result.calculateWinningPosition(position);
@@ -45,7 +45,7 @@ public class RacingEvent {
         System.out.print("\n");
     }
 
-    private void printRacing(Car car){
+    private void printRacing(Car car) {
         String print = String.format("%s %s %s", car.getName(), RACING_VIEW_CHAR, getPositionString(car));
         System.out.println(print);
     }

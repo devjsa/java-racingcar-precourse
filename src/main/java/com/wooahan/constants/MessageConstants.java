@@ -6,7 +6,7 @@ public class MessageConstants {
     public static final String COUNT_REQUIRE_MESSAGE = "시도할 회수는 몇회인가요?";
 
     public static final String RACING_RESULT_MESSAGE = "실행결과";
-    public static final String NOTICE_MESSAGE = "가 최종 우승했습니다.";
+    public static final String NOTICE_MESSAGE = "%s가 최종 우승했습니다.";
     public static final String ERROR_MESSAGE = "잘못 입력하셨습니다.";
     public static final String END_MESSAGE = "***Bye Bye***";
 }

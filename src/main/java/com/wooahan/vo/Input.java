@@ -17,7 +17,7 @@ public class Input {
 
     public void setRacingCount(String countString) throws NumberFormatException {
         int count = Integer.parseInt(countString);
-        if (count > ValueConstants.RACING_COUNT_LIMIT){
+        if (count > ValueConstants.RACING_COUNT_LIMIT) {
             throw new InputMismatchException();
         }
         this.racingCount = count;
