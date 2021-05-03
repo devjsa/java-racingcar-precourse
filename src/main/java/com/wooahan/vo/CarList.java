@@ -12,7 +12,7 @@ import java.util.List;
 public class CarList {
     private List<Car> carList;
 
-    public CarList(String carNames) throws InputMismatchException {
+    public CarList(String carNames) {
         String[] cars = validateCars(carNames);
         setCarList(cars);
     }
@@ -24,7 +24,7 @@ public class CarList {
         }
     }
 
-    private String[] validateCars(String carNames) throws InputMismatchException {
+    private String[] validateCars(String carNames) {
         String[] rawCars = carNames.split(ValueConstants.WINNER_DELIMITER_CHAR);
         validateListSize(rawCars);
         String[] cars = new String[rawCars.length];
@@ -37,13 +37,13 @@ public class CarList {
         return cars;
     }
 
-    private void validateEmptyString(String name) throws InputMismatchException {
+    private void validateEmptyString(String name) {
         if (name == null || "".equals(name)) {
             throw new InputMismatchException();
         }
     }
 
-    private void validateLength(String name) throws InputMismatchException {
+    private void validateLength(String name) {
         if (name.length() > ValueConstants.CAR_NAME_LIMIT) {
             throw new InputMismatchException();
         }
