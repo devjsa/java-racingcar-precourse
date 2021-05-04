@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class InputEvent {
 
     public Input getInput() {
+        System.out.println(MessageConstants.GREETING_MESSAGE);
         Scanner scanner = new Scanner(System.in);
         Input input = new Input();
         getCarInput(input, scanner);

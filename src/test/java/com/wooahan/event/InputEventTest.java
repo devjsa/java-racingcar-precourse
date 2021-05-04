@@ -1,4 +1,4 @@
-package com.wooahan;
+package com.wooahan.event;
 
 import com.wooahan.vo.CarList;
 import com.wooahan.vo.Input;
@@ -6,9 +6,9 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.InputMismatchException;
-import java.util.LinkedHashSet;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class InputEventTest {
     @Test

@@ -9,5 +9,5 @@ public class ValueConstants {
 
     public static final String RACING_VIEW_CHAR = ":";
     public static final String RACING_POSITION_CHAR = "-";
-    public static final String WINNER_DELIMITER_CHAR = ", ";
+    public static final String WINNER_DELIMITER_CHAR = ",";
 }

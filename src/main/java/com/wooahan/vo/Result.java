@@ -8,10 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Getter
-@Setter
 public class Result {
     private Integer winningPosition = 0;
-    private List<String> winningCars = new ArrayList<>();
+    private final List<String> winningCars = new ArrayList<>();
 
     public String getWinningCarString() {
         StringBuilder sb = new StringBuilder();
